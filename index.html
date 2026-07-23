@@ -26,7 +26,9 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
       <div class="nav-logo">AC</div>
-      <div class="nav-links">
+
+      <!-- Desktop links -->
+      <div class="nav-links" id="nav-links">
         <a href="#hero" class="nav-link active" data-section="hero">Home</a>
         <a href="#about" class="nav-link" data-section="about">About</a>
         <a href="#experience" class="nav-link" data-section="experience">Experience</a>
@@ -34,7 +36,22 @@
         <a href="#publications" class="nav-link" data-section="publications">Research</a>
         <a href="#contact" class="nav-link" data-section="contact">Contact</a>
       </div>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+
+    <!-- Mobile dropdown panel -->
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <a href="#hero" class="nav-mobile-link" data-section="hero">Home</a>
+      <a href="#about" class="nav-mobile-link" data-section="about">About</a>
+      <a href="#experience" class="nav-mobile-link" data-section="experience">Experience</a>
+      <a href="#projects" class="nav-mobile-link" data-section="projects">Projects</a>
+      <a href="#publications" class="nav-mobile-link" data-section="publications">Research</a>
+      <a href="#contact" class="nav-mobile-link" data-section="contact">Contact</a>
+    </div>
 
     <!-- Page Wrapper (scrollable sections) -->
     <div class="page" id="page">
@@ -300,5 +317,32 @@
     </div><!-- /page -->
 
     <script type="module" src="main.js"></script>
+    <script>
+      const hamburger  = document.getElementById('nav-hamburger');
+      const mobileMenu = document.getElementById('nav-mobile');
+
+      function toggleMenu(open) {
+        hamburger.classList.toggle('open', open);
+        mobileMenu.classList.toggle('open', open);
+        hamburger.setAttribute('aria-expanded', open);
+        mobileMenu.setAttribute('aria-hidden', !open);
+      }
+
+      hamburger.addEventListener('click', () => {
+        toggleMenu(!mobileMenu.classList.contains('open'));
+      });
+
+      // Close menu when any mobile link is tapped
+      mobileMenu.querySelectorAll('.nav-mobile-link').forEach((link) => {
+        link.addEventListener('click', () => toggleMenu(false));
+      });
+
+      // Close menu on outside click
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('#nav') && !e.target.closest('#nav-mobile')) {
+          toggleMenu(false);
+        }
+      });
+    </script>
   </body>
 </html>
