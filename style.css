@@ -401,7 +401,7 @@ body {
 /* ─────────────────────────────────────────────
    Responsive — switch to hamburger below 640px
 ───────────────────────────────────────────── */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .nav-links      { display: none; }           /* hide desktop links */
   .nav-hamburger  { display: flex; }           /* show hamburger */
   .nav-mobile     { display: flex; }           /* enable mobile panel */
