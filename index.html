@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atharv Choughule — iOS Developer & ML Researcher. Personal portfolio built with Three.js." />
+    <title>Atharv Choughule — Portfolio</title>
+    <!-- importmap: lets the browser resolve bare imports when served without a bundler (npx serve).
+         Vite ignores this at dev time and uses its own resolver. -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Three.js canvas lives here -->
+    <canvas id="bg"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav-logo">AC</div>
+      <div class="nav-links">
+        <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#publications" class="nav-link" data-section="publications">Research</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Page Wrapper (scrollable sections) -->
+    <div class="page" id="page">
+
+      <!-- ── Hero ── -->
+      <section class="section hero-section" id="hero">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="dot"></span>
+            Available for opportunities
+          </div>
+          <h1 class="hero-name">Atharv<br /><span class="gradient-text">Choughule</span></h1>
+          <p class="hero-role">iOS Developer &amp; ML Researcher</p>
+          <p class="hero-sub">Building intuitive mobile experiences &amp; pushing the boundaries of AI.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Years Coding</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">3</span><span class="stat-label">Publications</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><span class="stat-num">8.14</span><span class="stat-label">CGPA</span></div>
+          </div>
+        </div>
+        <div class="scroll-hint">
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- ── About ── -->
+      <section class="section about-section" id="about">
+        <div class="section-inner">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">Crafting with Purpose,<br /><span class="gradient-text">Building with Passion</span></h2>
+          <p class="about-text">
+            I'm a recent B.E. Computer Science &amp; Engineering graduate from SIES Graduate School of Technology, Mumbai with experience in both iOS development and machine learning. I'm passionate about bringing ideas to life through intuitive, well-crafted mobile applications. I believe in solving modern problems with efficient, minimalistic solutions — striving for simplicity without sacrificing depth.
+          </p>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">📱</div>
+              <h3>iOS Development</h3>
+              <div class="skill-tags">
+                <span>Swift</span><span>SwiftUI</span><span>UIKit</span>
+                <span>MVVM</span><span>REST APIs</span><span>MultipeerConnectivity</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🤖</div>
+              <h3>AI / ML</h3>
+              <div class="skill-tags">
+                <span>Machine Learning</span><span>Deep Learning</span>
+                <span>Scikit-learn</span><span>NumPy</span><span>BERT</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">⚙️</div>
+              <h3>Programming</h3>
+              <div class="skill-tags">
+                <span>Python</span><span>JavaScript</span><span>React</span>
+                <span>React Native</span><span>Objective-C</span><span>Git</span>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🎨</div>
+              <h3>Design</h3>
+              <div class="skill-tags">
+                <span>Figma</span><span>Wireframing</span><span>Prototyping</span><span>Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Experience ── -->
+      <section class="section experience-section" id="experience">
+        <div class="section-inner">
+          <div class="section-label">Experience</div>
+          <h2 class="section-title">Where I've <span class="gradient-text">Worked</span></h2>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-dot current"></div>
+              <div class="timeline-content current-role">
+                <div class="timeline-meta">Jul 2025 – Present &nbsp;<span class="current-badge">Current</span></div>
+                <h3 class="timeline-role">XR Developer</h3>
+                <div class="timeline-company">
+                  <a href="https://vyuxrimmersivestudios.com" target="_blank" rel="noopener" class="company-link">VyuXR Immersive Studios</a>
+                </div>
+                <p class="timeline-desc">
+                  Working as an XR Developer building immersive extended reality experiences. Recently joined the team and actively ramping up on XR development workflows, tools, and spatial computing.
+                </p>
+                <div class="timeline-tags"><span>XR</span><span>Extended Reality</span><span>Spatial Computing</span><span>3D</span></div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">Oct 2025 – May 2026</div>
+                <h3 class="timeline-role">Mobile Development Intern</h3>
+                <div class="timeline-company">Cindral OPC Pvt. Ltd.</div>
+                <p class="timeline-desc">
+                  Working on a React Native project to migrate an LMS (Learning Management System) to a mobile version. Involved in architecture decisions, API integration, and delivering a smooth cross-platform experience.
+                </p>
+                <div class="timeline-tags"><span>React Native</span><span>JavaScript</span><span>LMS</span></div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">Jul 2024 – Sept 2024</div>
+                <h3 class="timeline-role">Research Intern</h3>
+                <div class="timeline-company">SIES Graduate School of Technology</div>
+                <p class="timeline-desc">
+                  Built a multimodal deepfake detection system combining Facial Emotion Recognition (FER) and audio sentiment analysis using a BERT-based model. Implemented a pipeline to detect emotional inconsistencies between audio and video signals, achieving <strong>85.5% accuracy</strong>.
+                </p>
+                <div class="timeline-tags"><span>Python</span><span>Deep Learning</span><span>BERT</span><span>FER</span><span>NLP</span></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Education -->
+          <div class="section-label" style="margin-top: 4rem;">Education</div>
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-info">
+              <h3>B.E. Computer Science &amp; Engineering</h3>
+              <div class="edu-school">SIES Graduate School of Technology, University of Mumbai</div>
+              <div class="edu-meta">2021 – 2025 &nbsp;·&nbsp; CGPA: <strong>8.14</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Projects ── -->
+      <section class="section projects-section" id="projects">
+        <div class="section-inner">
+          <div class="section-label">Projects</div>
+          <h2 class="section-title">Things I've <span class="gradient-text">Built</span></h2>
+          <div class="projects-grid">
+
+            <div class="project-card featured">
+              <div class="project-badge">Featured</div>
+              <div class="project-header">
+                <span class="project-icon">📡</span>
+                <div class="project-links">
+                  <a href="https://apps.apple.com" target="_blank" rel="noopener" class="project-link" title="App Store">↗ App Store</a>
+                </div>
+              </div>
+              <h3 class="project-title">Render Monitor</h3>
+              <p class="project-desc">
+                An iOS &amp; iPad app that lets Blender users track their live render status and review current frames from any device, anywhere. Features real-time Firebase sync, custom cloud functions on Cloud Run, and in-app purchases via RevenueCat SDK.
+              </p>
+              <div class="project-tags">
+                <span>Swift</span><span>SwiftUI</span><span>Firebase</span><span>RevenueCat</span><span>Apple IAP</span><span>Blender</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <span class="project-icon">✈️</span>
+                <div class="project-links">
+                  <a href="https://github.com/roguestudios21" target="_blank" rel="noopener" class="project-link" title="GitHub">↗ GitHub</a>
+                </div>
+              </div>
+              <h3 class="project-title">ChatOverAir</h3>
+              <p class="project-desc">
+                A peer-to-peer chat app built at a hackathon using MultipeerConnectivity and Combine. Enables device-to-device communication over WiFi/Bluetooth without internet — real-time, offline-first messaging.
+              </p>
+              <div class="project-tags">
+                <span>Swift</span><span>SwiftUI</span><span>MultipeerConnectivity</span><span>Combine</span>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-header">
+                <span class="project-icon">🎤</span>
+              </div>
+              <h3 class="project-title">Marathi Audio Classifier</h3>
+              <p class="project-desc">
+                Deep learning system to classify human vs. synthesized Marathi speech using Mel-spectrogram analysis and a CNN model. Addresses the gap in audio deepfake detection for regional Indian languages.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>CNN</span><span>Mel-spectrogram</span><span>IEEE</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Publications / Research ── -->
+      <section class="section publications-section" id="publications">
+        <div class="section-inner">
+          <div class="section-label">Research</div>
+          <h2 class="section-title">Published <span class="gradient-text">Work</span></h2>
+          <div class="pubs-list">
+
+            <div class="pub-card">
+              <div class="pub-publisher">Springer Nature · Oct 2025</div>
+              <h3 class="pub-title">A Multimodal Approach to Deepfake Detection with Audio Sentiment and Facial Emotion Recognition</h3>
+              <p class="pub-desc">Novel pipeline combining FER and audio sentiment analysis with a BERT-based model to detect deepfakes by identifying emotional inconsistencies across modalities. Achieved 85.5% accuracy.</p>
+              <div class="pub-tags"><span>Deepfake</span><span>FER</span><span>BERT</span><span>Multimodal AI</span></div>
+            </div>
+
+            <div class="pub-card">
+              <div class="pub-publisher">IGI Global · Feb 2024</div>
+              <h3 class="pub-title">Hydrophobia: An Intense Fear of Water</h3>
+              <p class="pub-desc">Explores Virtual Reality Exposure Therapy (VRET) for hydrophobia — its mechanisms, advantages, limitations, patient experiences, and future prospects. Highlights the need for further research in VR-based psychological treatments.</p>
+              <div class="pub-tags"><span>VRET</span><span>VR</span><span>Psychology</span><span>Healthcare</span></div>
+            </div>
+
+            <div class="pub-card">
+              <div class="pub-publisher">IEEE</div>
+              <h3 class="pub-title">Classification of Human and Synthesized Audio in Marathi Speech using Melspectrogram Analysis and CNN</h3>
+              <p class="pub-desc">Research addressing the urgent need for audio deepfake detection in regional languages. Classifies synthesized vs. real human Marathi speech using deep learning techniques on mel-spectrogram features.</p>
+              <div class="pub-tags"><span>IEEE</span><span>CNN</span><span>Mel-spectrogram</span><span>NLP</span></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Contact ── -->
+      <section class="section contact-section" id="contact">
+        <div class="section-inner contact-inner">
+          <div class="section-label">Contact</div>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="contact-sub">I'm open to new roles, collaborations, and interesting ideas.</p>
+          <div class="contact-links">
+            <a href="mailto:atharv.choughule@gmail.com" class="contact-card" id="email-link">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">atharv.choughule@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/atharvchoughule" target="_blank" rel="noopener" class="contact-card" id="linkedin-link">
+              <span class="contact-icon">💼</span>
+              <div>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">in/atharvchoughule</div>
+              </div>
+            </a>
+            <a href="https://github.com/MonkInCrocs" target="_blank" rel="noopener" class="contact-card" id="github-link">
+              <span class="contact-icon">🐙</span>
+              <div>
+                <div class="contact-label">GitHub</div>
+                <div class="contact-value">MonkInCrocs</div>
+              </div>
+            </a>
+          </div>
+          <div class="footer-note">
+            Built with Three.js &nbsp;·&nbsp; Thane, India 🇮🇳
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /page -->
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
